@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+@import "variables";
+@import "header";
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+* {
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 200vh;
+    background-color: $white;
+    font-family: $BodyFontFamily;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1115px;
+    margin-inline: auto;
+}
+
+.btn-primary {
+    padding: 15px 30px;
+    border: 2px solid white;
+    color: $VeryLightGray;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: $VeryLightGray;
+        color: $VeryDarkViolet;
+    }
+}
+
+.btn-heading-primary {
+    padding: 15px 30px;
+    border: 2px solid $VeryDarkViolet;
+    color: $VeryLightGray;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background-color: $VeryDarkViolet;
+        color: $VeryLightGray;
+    }
+
+}
