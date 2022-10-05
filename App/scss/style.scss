@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 
 @import "variables";
+@import "mixins";
 @import "header";
 
 *,
@@ -32,7 +33,7 @@ li {
 }
 
 .container {
-    max-width: 1115px;
+    max-width: 1200px;
     margin-inline: auto;
 }
 
@@ -41,7 +42,8 @@ li {
     border: 2px solid white;
     color: $VeryLightGray;
     background-color: transparent;
-    transition: all .3s ease-in-out;
+    cursor: pointer;
+    transition: $transition;
 
     &:hover {
         background-color: $VeryLightGray;
@@ -52,13 +54,26 @@ li {
 .btn-heading-primary {
     padding: 15px 30px;
     border: 2px solid $VeryDarkViolet;
-    color: $VeryLightGray;
+    color: $VeryDarkViolet;
     background-color: transparent;
-    transition: all .3s ease-in-out;
+    cursor: pointer;
+    transition: $transition;
 
     &:hover {
         background-color: $VeryDarkViolet;
         color: $VeryLightGray;
     }
 
+}
+
+.open-menu.is-active {
+    display: none;
+}
+
+.close-menu {
+    display: none;
+}
+
+.close-menu.is-active {
+    display: block;
 }
