@@ -6,13 +6,27 @@
     background-position: 1485px -90px;
 
     .container {
-        height: 600px;
+        min-height: 600px;
         display: flex;
         justify-content: center;
         align-items: center;
 
         .even__columns {
 
+            .mobile__image {
+                display: none;
+
+                @include min-large {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex: 1;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
 
             .left {
                 display: flex;
@@ -20,6 +34,19 @@
                 justify-content: center;
                 max-width: 540px;
                 margin-inline: auto;
+                padding-left: 1rem;
+                
+                @include min-large {
+                    flex: 2;
+                    text-align: center;
+                    padding: 100px 1rem;
+
+                    hr {
+                        display: none;
+                    }
+                }
+
+                
 
                 h1 {
                     color: $white;
@@ -28,6 +55,10 @@
                     font-family: $HeadingsFontFamily;
                     font-weight: $HeadingsWeight;
                     margin-bottom: 25px;
+
+                    @include mobile {
+                        font-size: 2rem;
+                    }
                 }
 
                 p {
@@ -39,6 +70,15 @@
 
                 .btn-primary {
                     width: 30%;
+
+                    @include min-large {
+                        margin-inline: auto;
+                    }
+
+                    @include mobile {
+                        font-size: .7rem;
+                        padding: 8px 12px;
+                    }
                 }
 
                 hr {
@@ -51,6 +91,10 @@
             }
 
             .right {
+                padding-right: 1rem;
+                @include min-large {
+                    display: none;
+                }
 
                 .image {
                     position: relative;

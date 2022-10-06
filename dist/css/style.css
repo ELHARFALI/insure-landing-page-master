@@ -126,7 +126,7 @@
     color: hsl(0deg, 0%, 98%);
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .header .container .navbar .links .btn-primary {
     padding: 15px 50px;
   }
@@ -139,10 +139,24 @@
   background-position: 1485px -90px;
 }
 .hero .container {
-  height: 600px;
+  min-height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.hero .container .even__columns .mobile__image {
+  display: none;
+}
+@media (max-width: 50em) {
+  .hero .container .even__columns .mobile__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+  .hero .container .even__columns .mobile__image img {
+    max-width: 100%;
+  }
 }
 .hero .container .even__columns .left {
   display: flex;
@@ -150,6 +164,17 @@
   justify-content: center;
   max-width: 540px;
   margin-inline: auto;
+  padding-left: 1rem;
+}
+@media (max-width: 50em) {
+  .hero .container .even__columns .left {
+    flex: 2;
+    text-align: center;
+    padding: 100px 1rem;
+  }
+  .hero .container .even__columns .left hr {
+    display: none;
+  }
 }
 .hero .container .even__columns .left h1 {
   color: #fff;
@@ -158,6 +183,11 @@
   font-family: "DM Serif Display", serif;
   font-weight: 400;
   margin-bottom: 25px;
+}
+@media (max-width: 767px) {
+  .hero .container .even__columns .left h1 {
+    font-size: 2rem;
+  }
 }
 .hero .container .even__columns .left p {
   color: #fff;
@@ -168,11 +198,30 @@
 .hero .container .even__columns .left .btn-primary {
   width: 30%;
 }
+@media (max-width: 50em) {
+  .hero .container .even__columns .left .btn-primary {
+    margin-inline: auto;
+  }
+}
+@media (max-width: 767px) {
+  .hero .container .even__columns .left .btn-primary {
+    font-size: 0.7rem;
+    padding: 8px 12px;
+  }
+}
 .hero .container .even__columns .left hr {
   width: 150px;
   height: 2px;
   background-color: #fff;
   margin-bottom: 110px;
+}
+.hero .container .even__columns .right {
+  padding-right: 1rem;
+}
+@media (max-width: 50em) {
+  .hero .container .even__columns .right {
+    display: none;
+  }
 }
 .hero .container .even__columns .right .image {
   position: relative;

@@ -1,6 +1,6 @@
 // Small Screen
 @mixin small-screen {
-    @media (max-width: 400px) {
+    @media (max-width: 600px) {
         @content;
     }
 }
@@ -28,6 +28,12 @@
 // Large
 @mixin large {
     @media (min-width: 50em) {
+        @content;
+    }
+}
+
+@mixin min-large {
+    @media (max-width: 50em) {
         @content;
     }
 }
