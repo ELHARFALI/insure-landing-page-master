@@ -231,6 +231,63 @@
   position: absolute;
 }
 
+.content {
+  padding-top: 300px;
+  padding-bottom: 150px;
+}
+@media (max-width: 50em) {
+  .content {
+    padding-top: 150px;
+  }
+}
+@media (max-width: 50em) {
+  .content .container {
+    text-align: center;
+  }
+}
+.content .container .main-title hr {
+  width: 150px;
+  height: 2px;
+  background-color: hsl(270deg, 9%, 17%);
+  margin-bottom: 60px;
+}
+@media (max-width: 50em) {
+  .content .container .main-title hr {
+    margin-inline: auto;
+  }
+}
+.content .container .main-title h1 {
+  font-size: 3.4rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  margin-bottom: 90px;
+}
+@media (max-width: 50em) {
+  .content .container .even__columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.content .container .even__columns .card {
+  max-width: 350px;
+}
+.content .container .even__columns .card .icon {
+  margin-bottom: 42px;
+}
+.content .container .even__columns .card .title h2 {
+  font-size: 1.5rem;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  margin-bottom: 26px;
+}
+.content .container .even__columns .card .description p {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: hsl(273deg, 4%, 51%);
+}
+
 *,
 *::after,
 *::before {

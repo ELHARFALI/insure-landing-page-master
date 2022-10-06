@@ -1,0 +1,75 @@
+
+.content {
+    padding-top: 300px;
+    padding-bottom: 150px;
+
+    @include min-large {
+        padding-top: 150px;
+    }
+
+    .container {
+
+        @include min-large {
+            text-align: center;
+        }
+
+        .main-title {
+            
+            hr {
+                width: 150px;
+                height: 2px;
+                background-color: $VeryDarkViolet;
+                margin-bottom: 60px;
+
+                @include min-large {
+                    margin-inline: auto;
+                }
+            }
+
+            h1 {
+                font-size: 3.4rem;
+                font-family: $HeadingsFontFamily;
+                font-weight: $HeadingsWeight;
+                margin-bottom: 90px;
+            }
+        }
+
+        .even__columns {
+
+            @include min-large {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .card {
+                max-width: 350px;
+
+                .icon {
+                    margin-bottom: 42px;
+                }
+
+                .title {
+
+                    h2 {
+                        font-size: 1.5rem;
+                        font-family: $HeadingsFontFamily;
+                        font-weight: $HeadingsWeight;
+                        margin-bottom: 26px;
+                    }
+                }
+
+                .description {
+                    
+                    p {
+                        font-size: .8rem;
+                        line-height: 1.6;
+                        color: $DarkGrayishViolet;
+                    }
+                }
+            }
+
+        }
+    }
+}
