@@ -21,8 +21,18 @@
   align-items: center;
   padding: 0 1rem;
 }
+@media (min-width: 768px) {
+  .header .container .navbar__center {
+    width: 50%;
+  }
+}
 .header .container .navbar__center .logo {
   width: 100%;
+}
+@media (min-width: 768px) {
+  .header .container .navbar__center .hamburger {
+    display: none;
+  }
 }
 .header .container .navbar {
   position: absolute;
@@ -37,6 +47,19 @@
   background-size: contain;
   background-position: bottom;
 }
+@media (min-width: 768px) {
+  .header .container .navbar {
+    position: relative;
+    height: 100%;
+    top: 0;
+    overflow: visible;
+    background-color: transparent;
+    background-image: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .header .container .navbar.active {
   height: calc(100vh - 80px);
   overflow: visible;
@@ -47,17 +70,61 @@
   text-align: center;
   margin-top: 40px;
 }
+@media (min-width: 768px) {
+  .header .container .navbar .links {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .header .container .navbar .links li:not(:last-child) {
+    margin-right: 35px;
+  }
+}
 .header .container .navbar .links a {
   display: block;
   padding-top: 3rem;
   font-size: 1.6rem;
   color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+@media (min-width: 768px) {
+  .header .container .navbar .links a {
+    color: hsl(273deg, 4%, 51%);
+    font-size: 1rem;
+    padding: 0;
+  }
+  .header .container .navbar .links a:hover {
+    color: hsl(270deg, 9%, 17%);
+  }
 }
 .header .container .navbar .links .last {
   padding-bottom: 4rem;
 }
+@media (min-width: 768px) {
+  .header .container .navbar .links .last {
+    padding-bottom: 0;
+  }
+}
 .header .container .navbar .links .btn-primary {
-  padding: 15px 100px;
+  padding: 15px 30px;
+  border: 2px solid hsl(270deg, 9%, 17%);
+  color: hsl(270deg, 9%, 17%);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.header .container .navbar .links .btn-primary:hover {
+  background-color: hsl(270deg, 9%, 17%);
+  color: hsl(0deg, 0%, 98%);
+}
+@media (min-width: 768px) {
+  .header .container .navbar .links .btn-primary {
+    padding: 15px 30px;
+  }
 }
 @media (max-width: 400px) {
   .header .container .navbar .links .btn-primary {

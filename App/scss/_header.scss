@@ -19,13 +19,19 @@
             align-items: center;
             padding: 0 1rem;
 
+            @include tablet {
+                width: 50%;
+            }
+
             .logo {
                 width: 100%;
             }
 
             .hamburger {
 
-                
+                @include tablet {
+                    display: none;
+                }
             }
         }
 
@@ -42,6 +48,18 @@
             background-size: contain;
             background-position: bottom;
 
+            @include tablet {
+                position: relative;
+                height: 100%;
+                top: 0;
+                overflow: visible;
+                background-color: transparent;
+                background-image: none;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
             &.active {
                 height: calc(100vh - 80px);
                 overflow: visible;
@@ -53,19 +71,63 @@
                 text-align: center;
                 margin-top: 40px;
 
+                @include tablet {
+                    width: 100%;
+                    margin: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                li:not(:last-child) {
+
+                    @include tablet {
+                        margin-right: 35px;
+                    }
+                }
+
                 a {
                     display: block;
                     padding-top: 3rem;
                     font-size: 1.6rem;
                     color: $white;
+                    transition: $transition;
+
+                    @include tablet {
+                        color: $DarkGrayishViolet;
+                        font-size: 1rem;
+                        padding: 0;
+
+                        &:hover {
+                            color: $VeryDarkViolet;
+                        }
+                    }
                 }
 
                 .last {
                     padding-bottom: 4rem;
+
+                    @include tablet {
+                        padding-bottom: 0;
+                    }
                 }
 
                 .btn-primary {
-                    padding: 15px 100px;
+                    padding: 15px 30px;
+                    border: 2px solid $VeryDarkViolet;
+                    color: $VeryDarkViolet;
+                    background-color: transparent;
+                    cursor: pointer;
+                    transition: $transition;
+
+                    &:hover {
+                        background-color: $VeryDarkViolet;
+                        color: $VeryLightGray;
+                    }
+
+                    @include tablet {
+                        padding: 15px 30px;
+                    }
 
                     @include small-screen {
                         padding: 15px 50px;
