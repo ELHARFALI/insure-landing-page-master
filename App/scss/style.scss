@@ -4,6 +4,7 @@
 @import "variables";
 @import "mixins";
 @import "header";
+@import "section-hero";
 
 *,
 *::after,
@@ -76,4 +77,14 @@ li {
 
 .close-menu.is-active {
     display: block;
+}
+
+.even__columns {
+    display: grid;
+    gap: 1rem;
+
+    @include large {
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+    }
 }

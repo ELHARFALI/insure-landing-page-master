@@ -110,26 +110,76 @@
   }
 }
 .header .container .navbar .links .btn-primary {
-  padding: 15px 30px;
-  border: 2px solid hsl(270deg, 9%, 17%);
-  color: hsl(270deg, 9%, 17%);
-  background-color: transparent;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-.header .container .navbar .links .btn-primary:hover {
-  background-color: hsl(270deg, 9%, 17%);
-  color: hsl(0deg, 0%, 98%);
+  padding: 15px 100px;
 }
 @media (min-width: 768px) {
   .header .container .navbar .links .btn-primary {
     padding: 15px 30px;
+    border: 2px solid hsl(270deg, 9%, 17%);
+    color: hsl(270deg, 9%, 17%);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  .header .container .navbar .links .btn-primary:hover {
+    background-color: hsl(270deg, 9%, 17%);
+    color: hsl(0deg, 0%, 98%);
   }
 }
 @media (max-width: 400px) {
   .header .container .navbar .links .btn-primary {
     padding: 15px 50px;
   }
+}
+
+.hero {
+  background-color: hsl(256deg, 26%, 20%);
+  background-image: url(/images/bg-pattern-intro-right-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 1485px -90px;
+}
+.hero .container {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .container .even__columns .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 540px;
+  margin-inline: auto;
+}
+.hero .container .even__columns .left h1 {
+  color: #fff;
+  font-size: 3.7rem;
+  line-height: 0.9;
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+.hero .container .even__columns .left p {
+  color: #fff;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+.hero .container .even__columns .left .btn-primary {
+  width: 30%;
+}
+.hero .container .even__columns .left hr {
+  width: 150px;
+  height: 2px;
+  background-color: #fff;
+  margin-bottom: 110px;
+}
+.hero .container .even__columns .right .image {
+  position: relative;
+}
+.hero .container .even__columns .right .image img {
+  max-width: 100%;
+  position: absolute;
 }
 
 *,
@@ -200,4 +250,15 @@ li {
 
 .close-menu.is-active {
   display: block;
+}
+
+.even__columns {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 50em) {
+  .even__columns {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
 }/*# sourceMappingURL=style.css.map */

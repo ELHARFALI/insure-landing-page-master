@@ -1,0 +1,68 @@
+
+.hero {
+    background-color: $DarkViolet;
+    background-image: url(/images/bg-pattern-intro-right-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: 1485px -90px;
+
+    .container {
+        height: 600px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .even__columns {
+
+
+            .left {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                max-width: 540px;
+                margin-inline: auto;
+
+                h1 {
+                    color: $white;
+                    font-size: 3.7rem;
+                    line-height: .9;
+                    font-family: $HeadingsFontFamily;
+                    font-weight: $HeadingsWeight;
+                    margin-bottom: 25px;
+                }
+
+                p {
+                    color: $white;
+                    font-size: .8rem;
+                    line-height: 1.6;
+                    margin-bottom: 32px;
+                }
+
+                .btn-primary {
+                    width: 30%;
+                }
+
+                hr {
+                    width: 150px;
+                    height: 2px;
+                    background-color: $white;
+                    margin-bottom: 110px;
+
+                }
+            }
+
+            .right {
+
+                .image {
+                    position: relative;
+
+                    img {
+                        max-width: 100%;
+                        position: absolute;
+                    }
+                }
+
+                
+            }
+        }
+    }
+}
